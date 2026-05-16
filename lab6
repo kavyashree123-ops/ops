@@ -1,0 +1,13 @@
+sudo apt update
+sudo apt install maven -y
+mvn archetype:generate -DgroupId=com.example.app \
+-DartifactId=demo-app \
+-DarchetypeArtifactId=maven-archetype-quickstart \
+-DinteractiveMode=false
+cd demo-app
+ ls
+nano pom.xml
+nano src/main/java/com/example/app/App.java
+nano src/test/java/com/example/app/AppTest.java
+ mvn clean install
+mvn exec:java -Dexec.mainClass="com.example.app.App"
